@@ -2,6 +2,7 @@ FROM php:7.4-apache
 
 RUN docker-php-ext-install mysqli
 
+RUN unzip html.zip
 COPY html /var/www/html
 COPY flag.txt /flag.txt
 RUN chown -R root:www-data /var/www/html
